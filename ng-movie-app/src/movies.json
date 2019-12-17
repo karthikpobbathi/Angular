@@ -1,0 +1,48 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "name": "batman-begins",
+      "genre": "drama",
+      "rating": 9.8
+    },
+    {
+      "name": "darkknight",
+      "genre": "",
+      "year": 10,
+      "id": 2
+    },
+    {
+      "name": "darkknight",
+      "genre": "",
+      "year": 10,
+      "id": 3
+    },
+    {
+      "name": "dark-knight-rises",
+      "genre": "Drama",
+      "year": "",
+      "Rating": 9,
+      "id": 4
+    },
+    {
+      "name": "crawl",
+      "genre": "fiction",
+      "year": "",
+      "rating": 8.7,
+      "id": 5
+    },
+    {
+      "name": "crawl",
+      "genre": "fiction",
+      "rating": 9,
+      "id": 6
+    },
+    {
+      "name": "ghnhf",
+      "genre": "fiction",
+      "rating": 12,
+      "id": 7
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+Search:
+<select [(ngModel)]="category">
+    <option *ngFor="let c of categories">{{c}}</option>
+</select>
+<button (click)="searchMovie()">Search</button>
+<div *ngIf="movies">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>genre</th>
+            <th>rating</th>
+        </tr>
+        <tbody *ngFor="let m of movies">
+            <tr *ngIf="m.genre == category">
+                <td>{{m.id}}</td>
+                <td>{{m.name}}</td>
+                <td>{{m.genre}}</td>
+                <td>{{m.rating}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

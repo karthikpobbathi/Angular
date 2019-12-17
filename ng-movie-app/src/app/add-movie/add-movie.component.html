@@ -1,0 +1,15 @@
+Movie Name:
+<input type="text" [(ngModel)]="movies.name">
+<br>
+Give Rating
+<input type="number" [(ngModel)]="movies.rating">
+<br>
+Select Genre:
+<select [(ngModel)]="movies.genre">
+    <option></option>
+    <option>Drama</option>
+    <option>fiction</option>
+    <option>comedy</option>
+     
+</select>
+<button (click)="addMovie()">Add Movie</button>
