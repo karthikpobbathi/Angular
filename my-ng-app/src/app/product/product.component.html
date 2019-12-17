@@ -1,0 +1,28 @@
+<p>product component</p>
+<p>user:{{username}}</p>
+<p>age:{{age}}</p>
+<ol type="I" >
+    <li *ngFor="let lan of langs">{{lan}}</li>
+</ol>
+<select>
+    <option *ngFor="let lan of langs">{{lan}}</option>
+</select>
+<ol>
+    <li *ngFor="let lan of products">{{lan.id}}   {{lan.name}}   {{lan.price}}</li>
+</ol>
+<select>
+    <option  *ngFor="let lan of products"> {{lan.name}}  </option>
+</select>
+<table border="1">
+    <tr>
+        <td>id </td>
+        <td>name </td>
+        <td>price </td>
+    </tr>
+    <tr *ngFor="let lan of products">
+        <td>{{lan.id}} </td>
+        <td>{{lan.name}} </td>
+        <td>{{lan.price}} </td>
+    </tr>
+</table>
+<button (click)="display()" >click </button>
