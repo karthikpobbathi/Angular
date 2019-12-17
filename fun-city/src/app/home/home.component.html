@@ -1,0 +1,19 @@
+<h1>Welcome To GameCity: Experience the Online Gaming Experience</h1>
+
+    Name:
+    <input type="text" [(ngModel)]="name"name="name" #nameRef="ngModel" 
+    required pattern="^[A-z][a-z]{2,}$">
+    <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert alert-danger">
+        <div [hidden]="!nameRef.errors.required">username is required</div>
+        <div [hidden]="!nameRef.errors.pattern">should start with capital</div></div><br>
+    Address:
+    <input type="text" [(ngModel)]="address" name="address" #addRef="ngModel" 
+    required>
+    <div *ngIf="addRef.errors && (addRef.dirty || addRef.touched)" class="alert alert-danger">
+        <div [hidden]="!addRef.errors.required">username is required</div></div><br>
+    Amount To Pay
+    <input type="number" [(ngModel)]="amount" #amountRef="ngModel"  required>
+    <div *ngIf="amountRef.errors && (amountRef.dirty || amountRef.touched)" class="alert alert-danger">
+        <div [hidden]="!amountRef.errors.required">username is required</div></div><br>
+    <button (click)="buyCard()">Buy Card</button><br>
+    Note: 100 rs will be deducted for service charge

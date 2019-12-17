@@ -1,0 +1,7 @@
+{"GameList":[
+       {"id": 1, "gameId": 1001, "gameName": "Shooting", "gamePrice": 105},
+           {"id": 2, "gameId": 1002, "gameName": "Angry Bird", "gamePrice": 95},
+           {"id": 3, "gameId": 1003, "gameName": "Temple Run", "gamePrice": 200},          
+           {"id": 4, "gameId": 1004,"gameName": "Bike Race", "gamePrice": 90},
+	   {"id": 5, "gameId": 1005, "gameName": "Air Controle", "gamePrice": 800}
+]}
