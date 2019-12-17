@@ -1,0 +1,29 @@
+<div>
+    <h1 style="text-align:right">Welcome to Ecommerce!</h1>
+</div>
+<hr>
+<a routerLink='/'>SearchForm</a>  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink='/showlist'>ProductList</a>
+<br>
+<br>
+<br>
+<br>
+<h2>Product List</h2>
+<table class='table' border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th></th>
+    </tr>
+    
+        <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+           <td>{{p.price}}</td>
+            <td>{{p.category}}</td>
+            <td><button (click)="removeProduct(p.id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+    
+</table>

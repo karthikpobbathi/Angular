@@ -1,0 +1,32 @@
+<div>
+    <h1 style="text-align:right">Welcome to Ecommerce!</h1>
+</div>
+<hr>
+<a routerLink='/'>SearchForm</a>  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink='/showlist'>ProductList</a>
+<br>
+<br>
+<br>
+
+<h2>Search Form</h2>
+<div class="form-inline">
+<input type="text" [(ngModel)]="prod" class="form-control">&nbsp;&nbsp;&nbsp;&nbsp;
+<button (click)="searchByAnyField()" class="btn btn-primary" value="1" >Search</button></div>
+<br>
+<table class='table' border="1" >
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th></th>
+    </tr>
+    <tbody *ngFor="let p of products">
+        <tr *ngIf=" ((p.name==prod1)||(p.category==prod1))">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.category}}</td>
+        </tr>
+    </tbody>
+</table>
