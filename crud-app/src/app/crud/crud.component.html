@@ -1,0 +1,17 @@
+<table class="table">
+    <tr>
+       <th> ID
+    </th>
+    <th>Name</th>
+    <th>Price</th></tr>
+    <tr *ngFor= "let p of products | paginate:{itemsPerPage:3,currentPage:p}">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+    </tr>
+</table>
+<button (click)="getAllProducts()" class="btn btn-primary">View.All</button>
+<button (click)="addProduct() "class="btn btn-success" >add</button>
+<button (click)="updateProduct()"class="btn btn-success">update</button>
+<button (click)="removeProduct()"class="btn btn-success">remove</button>
+<pagination-controls style="border-radius: 10px" (pageChange)="p=$event"></pagination-controls>
