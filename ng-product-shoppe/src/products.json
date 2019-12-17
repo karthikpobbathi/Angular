@@ -1,0 +1,56 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Scissors",
+      "Description": "use this to cut stuff",
+      "Price": 4.99
+    },
+    {
+      "name": "Steak Knifes",
+      "Description": "Use this to eat food",
+      "Price": 10.99,
+      "id": 2
+    },
+    {
+      "name": "gdfg",
+      "Description": "gfg",
+      "Price": 56,
+      "Id": "3",
+      "id": 3
+    },
+    {
+      "name": "dsg",
+      "Description": "45",
+      "Price": 46,
+      "Id": "3",
+      "id": 4
+    },
+    {
+      "name": "dgsdg",
+      "Description": "gfsd",
+      "Price": 453,
+      "Id": "34",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "dgfsd",
+      "Description": "35",
+      "Price": 35,
+      "Id": "34"
+    },
+    {
+      "id": "45",
+      "name": "ftg",
+      "Description": "dggf",
+      "Price": 345
+    },
+    {
+      "id": "23",
+      "name": "bhj",
+      "Description": "jjkl",
+      "Price": 1000
+    }
+  ]
+}

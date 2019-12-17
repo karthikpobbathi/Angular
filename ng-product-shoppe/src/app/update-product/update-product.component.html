@@ -1,0 +1,22 @@
+<div class="container text-center">
+    <h2>Edit Product Details</h2>
+    <div class="form-inline">
+    Id:
+    <input type="number" readonly class="form-control" [(ngModel)]="product.id">
+    </div><br>
+    <div class="form-inline">
+    Name:
+   <input type="text" class="form-control" [(ngModel)]="product.name">
+   </div><br>
+   <div class="form-inline">
+   Description:
+   <input type="text" class="form-control" [(ngModel)]="product.Description">
+   </div><br>
+   <div class="form-inline">
+   Price:
+   <input type="number" class="form-control" [(ngModel)]="product.Price">
+</div>
+   <br>
+   <button (click)="updateProduct()" class="btn btn-info">Submit</button>
+   <a routerLink="/" class="btn btn-info">cancel</a>
+   </div>

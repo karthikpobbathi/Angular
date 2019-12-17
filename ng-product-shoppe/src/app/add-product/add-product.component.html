@@ -1,0 +1,16 @@
+<div class="container text-center">
+    <h3>Add New Products</h3>
+    <div class="form-inline">
+Id:
+<input type="text" [(ngModel)]="product.id" class="form-control"/>
+</div>
+<div class="form-inline">Name:
+<input type="text" [(ngModel)]="product.name" class="form-control"/>
+</div>
+<div class="form-inline">Description:
+    <input type="text" [(ngModel)]="product.Description" class="form-control"/>
+</div><div class="form-inline">price:
+<input  type="number" [(ngModel)]="product.Price" class="form-control"/>
+</div><button (click)="addProduct()" class="btn btn-success">Add</button>
+
+<a routerLink="/" class="btn btn-info">cancel</a></div>

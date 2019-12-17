@@ -1,0 +1,31 @@
+<button class="btn btn-warning" (click)="logout()">logout</button>
+<h1 style="text-align:center">
+    Welcome to Product Application!
+</h1>
+<h2 style="text-align:center">
+    Product List
+</h2><table class='table'>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    <tr *ngFor="let p of products| paginate:{itemsPerPage:3,currentPage:p}">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.Description}}</td>
+        <td>{{p.Price}}</td>
+        <td><a routerLink="/update" [state]="{product:p}" class="btn btn-info">Edit</a></td>
+        <td><button (click)="removeProduct(p.id)" class="btn btn-danger">Delete</button></td>
+    </tr>
+</table>
+<a routerLink ="/addp" class="btn btn-primary">Add</a>
+<pagination-controls style="border-radius: 10px" (pageChange)="p=$event"></pagination-controls>
+,
+        {
+            "id":"p04",
+            "name":"Apple",
+            "price":80000,
+            "category":"laptop"
+        }
