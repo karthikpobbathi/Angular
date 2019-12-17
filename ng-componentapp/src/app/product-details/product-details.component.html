@@ -1,0 +1,88 @@
+<!-- <body style="background-color: blue"> -->
+    <!-- <h1 style="text-align: center;color: white">Product Details</h1>
+        Category:
+        <select [(ngModel)]="cat">
+            <option *ngFor="let i of category">{{i}}</option>
+        </select>
+        <div [ngSwitch]="cat">
+            Product:
+            <select *ngSwitchCase="'Electronics'">
+                <option *ngFor="let j of Electronics">{{j.name}}</option>
+            </select>
+           
+            <select *ngSwitchCase="'Grocery'">
+                <option *ngFor="let k of Grocery">{{k.name}}</option>
+            </select>
+        </div>
+        <div [ngSwitch]="cat">
+                Product:
+                <select *ngSwitchCase="'Electronics'" [(ngModel)]="pri">
+                    <option *ngFor="let j of Electronics" hidden>{{j.price}}</option>
+                </select>
+               
+                <select *ngSwitchCase="'Grocery'" [(ngModel)]="pri">
+                    <option *ngFor="let k of Grocery" hidden>{{k.price}}</option>
+                </select>
+            </div>
+        Quantity:
+        <div [ng]="cat"></div>
+        <input type="number" ><br>
+        Total Price:
+        <input type="number" readonly>
+        <button (click)="calculate()" >Submit</button>
+        <button type="reset"></button> -->
+
+<!-- ?</body> -->
+<h1>Product Details</h1>
+Category: 
+<select [(ngModel)]="cat">
+<option *ngFor="let c of category">{{c}}</option>
+</select>
+ 
+<div [ngSwitch]="cat">
+ 
+<div *ngSwitchCase="'Electronics'">
+ Product: 
+<select [(ngModel)]="ele">
+<option *ngFor="let e of Electronics">{{e}}</option>
+</select>
+<div [ngSwitch]="ele">
+<div *ngSwitchCase="'Television'">
+ Quantity: <input type="number" [(ngModel)]="q">
+ Total price {{res*20000}}
+<button (click)="submit()">Submit</button>
+</div>
+<div *ngSwitchCase="'Laptop'">
+ Quantity: <input type="number" [(ngModel)]="q">
+ Total price {{res*30000}}
+<button (click)="submit()">Submit</button>
+ 
+</div>
+<div *ngSwitchCase="'Phone'">
+ Quantity: <input type="number" [(ngModel)]="q">
+ Total price {{res*10000}}
+<button (click)="submit()">Submit</button>
+ 
+</div>
+</div>
+</div>
+<div *ngSwitchCase="'Grocery'">
+ Product: 
+<select [(ngModel)]="gro">
+<option *ngFor="let g of Grocery">{{g}}</option>
+</select>
+<div [ngSwitch]="gro">
+<div *ngSwitchCase="'Soap'">
+ Quantity: <input type="number" [(ngModel)]="q">
+ Total price {{res*40}}
+<button (click)="submit()">Submit</button>
+</div>
+<div *ngSwitchCase="'Powder'">
+ Quantity: <input type="number" [(ngModel)]="q">
+ Total price {{res*90}}
+<button (click)="submit()">Submit</button>
+ 
+</div>
+</div>
+ 
+</div>
