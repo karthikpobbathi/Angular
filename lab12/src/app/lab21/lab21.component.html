@@ -1,0 +1,35 @@
+<h4>Add Employee</h4>
+ID<input type="number" [(ngModel)]="id"><br>
+Name<input type="text" [(ngModel)]="name"><br>
+Salary<input type="number" [(ngModel)]="sal"><br>
+Department<input type="text" [(ngModel)]="Dep"><br>
+<button (click)="add()" >Add Employee</button>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Department</th>
+        <th>ACTION</th>
+    </tr>
+    <tr *ngFor="let i of employee;let j=index">
+        <td>{{i.eid}}</td>
+        <td>{{i.ename}}</td>
+        <td>{{i.esal}}</td>
+        <td>{{i.Dep}}</td>
+        <td colspan="2">
+            <button>UPDATE</button>
+            <button (click)="delete(j)">DELETE</button>
+        </td>
+
+        
+    </tr>
+</table>
+{{25000|currency:'INR'}}
+LowercasePipe:{{'CAPGEMINI' |lowercase}}
+uppercasePipe:{{'capgemini'|uppercase}}
+numberpipe:{{123|number:'4.1-2'}}
+{{d| date:'dd/MM/yyyy'}}
+{{d| date:'full'}}
+{{d|date:'EEEE'}}
+

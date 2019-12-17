@@ -1,0 +1,64 @@
+<form [formGroup]="myForm">
+    
+        Product ID:
+    
+    <input type="number" formControlName="pid" [(ngModel)]="pid">
+    <div *ngFor="let u of error_messages.pid">
+        <div *ngIf="myForm.get('pid').hasError(u.type)">
+            <b style="color:red">{{u.message}}</b>
+        </div>
+    </div>
+    Product Name
+    
+        <input type="text" formControlName="pname" [(ngModel)]="pname">
+    
+    <div *ngFor="let u of error_messages.pname">
+        <div *ngIf="myForm.get('pname').hasError(u.type)">
+            <b style="color:red">{{u.message}}</b>
+        </div>>
+    </div>
+    
+        Product Cost
+     <input type="text" formControlName="pcost" [(ngModel)]="pcost">
+    <div *ngFor="let u of error_messages.pcost">
+        <div *ngIf="myForm.get('pcost').hasError(u.type)">
+            <b style="color:red">{{u.message}}</b>
+        </div>
+    </div>
+    <div>
+        Product Category
+        <select formControlName="pcat" [(ngModel)]="pcat">
+            <option></option>
+            <option>Electronics
+            </option>
+            <option>Groceries</option>
+            <option>Footwear</option>
+        </select>
+    </div>
+    <div *ngFor="let u of error_messages.pcat">
+        <div *ngIf="myForm.get('pcat').hasError(u.type)">
+            <b style="color:red">{{u.message}}</b>
+        </div>
+    </div>
+    Product Online<br>
+        <input type="radio" value="Yes" formControlName="ponline" [(ngModel)]="ponline" />Yes
+        <input type="radio" value="No" formControlName="ponline" [(ngModel)]="ponline1"/>No
+    
+    <div *ngFor="let u of error_messages.ponline">
+        <div *ngIf="myForm.get('ponline').hasError(u.type)">
+            <b style="color:red">{{u.message}}</b>
+        </div>
+    </div>
+    Available in Store<br>
+        <input type="checkbox"  formControlName="pstore" [(ngModel)]="pstore" />Big Bazar
+        <input type="checkbox"   formControlName="pstore1" [(ngModel)]="pstore1"/>DMart
+        <input type="checkbox"  formControlName="pstore2" [(ngModel)]="pstore2"/>Reliance
+        <input type="checkbox"  formControlName="pstore3" [(ngModel)]="pstore3" />Mega Store
+    
+    <div *ngFor="let u of error_messages.pstore">
+            <div *ngIf="myForm.get('pstore').hasError(u.type)">
+                <b style="color:red">{{u.message}}</b>
+            </div>
+        </div>
+        <button (click)="onFormSubmit()"> Add Product</button>
+</form>
