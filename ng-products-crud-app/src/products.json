@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nmae": "rice",
+      "price": 89
+    },
+    {
+      "nmae": "dfh",
+      "price": 44,
+      "id": 4
+    },
+    {
+      "nmae": "hcf",
+      "price": "",
+      "id": 5
+    },
+    {
+      "nmae": "thyfh",
+      "price": 545,
+      "id": 6
+    },
+    {
+      "nmae": "ghfch",
+      "price": 6886,
+      "id": 7
+    }
+  ]
+}
